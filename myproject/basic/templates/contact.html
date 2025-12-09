@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav-bar{
+            display: flex;
+            background-color: rgb(71, 64, 64);
+            color: white;
+            justify-content: space-evenly;
+            border: 2px solid;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .nav-items{
+            font-size: large;
+            cursor:grabbing;
+        }
+        h1{
+            text-align: center;
+            color: aquamarine;
+            
+        }
+        a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-bar">
+        <div class="nav-items"><a href="{% url 'home' %}">HOME</a></div>
+        <div class="nav-items"><a href="{% url 'about' %}">ABOUT</a></div>
+        <div class="nav-items"><a href="{% url 'menu' %}">MENU</a></div>
+        <div class="nav-items"><a href="{% url 'contact' %}">CONTACT</a></div>
+    </div>
+
+    <h1>Welcome to Contact Us</h1>
+    
+</body>
+</html>

@@ -9,6 +9,17 @@ from basic.models import Employee,Product
 
 
 # Create your views here.
+
+# def GetOrders(request):
+#     try:
+#         if request.method == "GET":
+#             OrderDetails.
+#             return JsonResponse({"status": "success","message": "data retrived successfully"})
+#         return JsonResponse({"status":"Failed"})
+#     except Exception as e:
+#         return JsonResponse({"message": "somting went wrong"})    
+    
+    
 def home(request):
     return render(request,'home.html')
 
@@ -86,7 +97,7 @@ def createEmployee(request):
             Employee.objects.create(emp_name = data.get("name"),emp_salary = data.get("salary"),emp_email = data.get("email")
             )
             print(data)
-        return JsonResponse({"status":"success","data":data},status = 201)
+            return JsonResponse({"status":"success","data":data},status = 201)
     
     except Exception as e:
         return JsonResponse({"status":"error"},status = 500)
@@ -111,3 +122,6 @@ def createProduct(request):
         
     except Exception as e:
         return JsonResponse({"status":"error","message":str(e)})
+    
+   
+ 

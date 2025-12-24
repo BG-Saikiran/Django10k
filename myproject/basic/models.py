@@ -1,4 +1,5 @@
 from django.db import models
+import uuid
 
 
 # Create your models here.
@@ -12,4 +13,5 @@ class Product(models.Model):
 class Employee(models.Model):
     emp_name = models.CharField(max_length=100)
     emp_salary = models.IntegerField()
-    emp_email = models.EmailField(unique=True)    
+    emp_email = models.EmailField(unique=True) 
+    
